@@ -20,7 +20,7 @@ public class NewsPresenter implements Presenter<NewsInterface> {
         this.apiService = apiService;
     }
 
-    public void onGetNewsArticles(){
+    public void getNewsArticles(){
         disposable = apiService.articles()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())

@@ -1,6 +1,7 @@
 package com.zack.newsapp.presentation;
 
 import com.zack.newsapp.data.entities.NewsArticle;
+import com.zack.newsapp.data.entities.NewsArticleResponse;
 
 import java.util.List;
 
@@ -9,5 +10,5 @@ import java.util.List;
  */
 
 public interface NewsInterface extends View{
-    void displayArticles(List<NewsArticle> articles);
+    void displayArticles(NewsArticleResponse response);
 }
