@@ -14,8 +14,8 @@ the option to use the gradle wrapper
 * You may also be prompted to change to the appropriate SDK folder for your local machine
 * Once the project has compiled -> run the project!
 
-(Screenshot_1532085931.png)
+![image](screenshots/Screenshot_1532085931.png)
 
-(Screenshot_1532085937.png)
+![image](Screenshot_1532085937.png)
 
-(Screenshot_1532085940.png)
+![image](Screenshot_1532085940.png)
