@@ -2,7 +2,9 @@ package com.zack.newsapp.data.entities;
 
 import com.squareup.moshi.Json;
 
-public class NewsArticle {
+import java.io.Serializable;
+
+public class NewsArticle implements Serializable {
 
     @Json(name = "source")
     public Source source;

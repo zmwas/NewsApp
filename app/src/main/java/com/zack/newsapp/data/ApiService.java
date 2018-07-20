@@ -1,6 +1,7 @@
 package com.zack.newsapp.data;
 
 import com.zack.newsapp.data.entities.NewsArticle;
+import com.zack.newsapp.data.entities.NewsArticleResponse;
 
 import java.util.List;
 
@@ -12,6 +13,6 @@ import retrofit2.http.GET;
  */
 
 public interface ApiService {
-    @GET("/top-headlines")
-    Observable<List<NewsArticle>> articles();
+    @GET("/v2/top-headlines/")
+    Observable<NewsArticleResponse> articles();
 }
