@@ -33,7 +33,6 @@ public class NewsDetailFragment extends Fragment {
         NewsArticle article = (NewsArticle) getArguments().getSerializable("article");
         Picasso.get().load(article.getUrlToImage()).fit()
                 .into(binding.articleImage);
-        Log.d("hey there", article.getTitle());
         binding.articleTitle.setText(article.getTitle());
         binding.articleContent.setText(article.getDescription());
     }

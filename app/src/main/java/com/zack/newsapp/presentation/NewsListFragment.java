@@ -1,11 +1,11 @@
 package com.zack.newsapp.presentation;
 
-import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.*;
@@ -60,6 +60,10 @@ public class NewsListFragment extends Fragment implements NewsInterface, Recycle
         recyclerView = binding.newsArticles;
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
+        binding.swipe.setOnRefreshListener(() -> {
+            newsPresenter.getNewsArticles();
+            binding.swipe.setRefreshing(false);
+        });
         return binding.getRoot();
     }
 
@@ -68,6 +72,12 @@ public class NewsListFragment extends Fragment implements NewsInterface, Recycle
         List<NewsArticle> articles = response.articles;
         NewsAdapter newsAdapter = new NewsAdapter(getActivity(), articles, this);
         recyclerView.setAdapter(newsAdapter);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        newsPresenter.getNewsArticles();
     }
 
     @Override
