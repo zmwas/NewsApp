@@ -16,6 +16,6 @@ the option to use the gradle wrapper
 
 ![image](screenshots/Screenshot_1532085931.png)
 
-![image](Screenshot_1532085937.png)
+![image](screenshots/Screenshot_1532085937.png)
 
-![image](Screenshot_1532085940.png)
+![image](screenshots/Screenshot_1532085940.png)
