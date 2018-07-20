@@ -1,4 +1,4 @@
-package com.zack.newsapp.data;
+package com.zack.newsapp.data.entities;
 
 import com.squareup.moshi.Json;
 
