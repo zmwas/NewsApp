@@ -1,5 +1,7 @@
 package com.zack.newsapp.data;
 
+import com.zack.newsapp.data.entities.NewsArticle;
+
 import java.util.List;
 
 import io.reactivex.Observable;
